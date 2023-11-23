@@ -1,0 +1,7 @@
+node_modules
+
+**/cartridge/static
+dw.json
+
+.vscode
+.DS_Store

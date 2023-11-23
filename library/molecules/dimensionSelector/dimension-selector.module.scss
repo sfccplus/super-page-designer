@@ -1,0 +1,31 @@
+.inputContainer {
+    background-color: #fff;
+    border: 1px solid #dddbda;
+    border-radius: 0.25rem;
+    display: flex;
+    height: 32px;
+    padding: 0 3px;
+    overflow: hidden;
+
+    input, select {
+        border: 0;
+        outline: 0;
+    }
+
+    input {
+        font-size: 0.875rem;
+        width: 100%;
+    }
+
+    select {
+        cursor: pointer;
+        color: #0176d3;
+        appearance: none;
+    }
+
+    &:has(:focus) {
+        border-color: #1589ee;
+        background-color: #fff;
+        box-shadow: 0 0 3px #0070D2;
+    }
+}

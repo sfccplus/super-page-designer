@@ -1,0 +1,11 @@
+{
+    "name": "Rich Text Editor Trigger",
+    "resources": {
+      "scripts": [
+        "/js/experience/editors/spdRichTextEditor/spdRichTextEditorTrigger.js"
+      ],
+      "styles": [
+        "https://cdnjs.cloudflare.com/ajax/libs/design-system/2.8.3/styles/salesforce-lightning-design-system.min.css"
+      ]
+    }
+}

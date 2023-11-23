@@ -1,0 +1,12 @@
+{
+    "name": "Rich Text Editor",
+    "resources": {
+      "scripts": [
+        "https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.3.0/tinymce.min.js",
+        "/js/experience/editors/spdRichTextEditor/spdRichTextEditor.js"
+      ],
+      "styles": [
+        "/css/experience/editors/spdRichTextEditor.css"
+      ]
+    }
+}

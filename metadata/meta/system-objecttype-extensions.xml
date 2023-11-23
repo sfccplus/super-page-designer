@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="SPD_breakpoints">
+                <display-name xml:lang="x-default">Breakpoints Config</display-name>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="SPD_richTextFontSizes">
+                <display-name xml:lang="x-default">Rich text editor font sizes</display-name>
+                <description xml:lang="x-default">Rich text editor font sizes separated by spaces (eg: 12px 16px 24px)</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="SPD_richTextFonts">
+                <display-name xml:lang="x-default">Rich text editor fonts</display-name>
+                <description xml:lang="x-default">Rich text editor font families</description>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="SPD_attributes">
+                <display-name xml:lang="x-default">Super Page Designer Configuration</display-name>
+                <attribute attribute-id="SPD_richTextFonts"/>
+                <attribute attribute-id="SPD_richTextFontSizes"/>
+                <attribute attribute-id="SPD_breakpoints"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

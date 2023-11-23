@@ -1,0 +1,41 @@
+{
+  "name": "sfcc-super-pd",
+  "version": "1.0.0",
+  "scripts": {
+    "build:dev": "./sfra-webpack-builder/node_modules/.bin/webpack --config ./sfra-webpack-builder/webpack.config.js --env dev --env local",
+    "build:prod": "./sfra-webpack-builder/node_modules/.bin/webpack --config ./sfra-webpack-builder/webpack.config.js --env local",
+    "build:watch": "./sfra-webpack-builder/node_modules/.bin/webpack --config ./sfra-webpack-builder/webpack.config.js --env dev --watch --env local"
+  },
+  "sfraBuilderConfig": "./sfraBuilderConfig",
+  "keywords": [],
+  "author": "Yassir Mounsif",
+  "license": "BSD-3",
+  "devDependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-react": "^7.22.15",
+    "@types/json2mq": "^0.2.2",
+    "@types/react-redux": "^7.1.27",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "prettier": "3.1.0",
+    "prop-types": "^15.8.1",
+    "sass": "^1.68.0"
+  },
+  "dependencies": {
+    "@salesforce-ux/design-system": "^2.22.0",
+    "json2mq": "^0.2.0",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-color": "^2.19.3",
+    "react-dom": "^18.2.0",
+    "react-portal": "^4.2.2",
+    "react-redux": "^8.1.2",
+    "react-switch": "^7.0.0",
+    "style-object-to-css-string": "^1.0.1",
+    "swiper": "^11.0.4"
+  }
+}

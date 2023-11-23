@@ -1,0 +1,10 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/layouts/spdLayout.css');
+</isscript>
+
+<isprint value="${pdict.regions.content.render()}" encoding="off" />
+
+<style>
+    <isprint value="${pdict.regionsCss}" encoding="off" />
+</style>

@@ -1,0 +1,12 @@
+{
+    "name": "Rich Text Editor",
+    "resources": {
+      "scripts": [
+        "/js/experience/editors/spdRegionEditor/spdRegionEditor.js"
+      ],  
+      "styles": [
+        "https://cdnjs.cloudflare.com/ajax/libs/design-system/2.8.3/styles/salesforce-lightning-design-system.min.css",
+        "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      ]
+    }
+}

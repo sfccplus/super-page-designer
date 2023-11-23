@@ -1,0 +1,28 @@
+{
+    "name": "Super Region",
+    "description": "Super Region Component",
+    "group": "superpagedesigner",
+    "attribute_definition_groups": [
+        {
+            "id": "regionEditor",
+            "name": "Super Region Editor",
+            "attribute_definitions": [
+                  {
+                      "id": "regionEditor",
+                      "name": "Region Editor",
+                      "type": "custom",
+                      "required": false,
+                      "editor_definition": {
+                        "type": "spdRegionEditor.spdRegionEditor"
+                      }
+                  }
+            ]
+        }
+    ],
+    "region_definitions": [
+        {
+          "id":"content",
+          "name":"Content"
+        }
+    ]
+}

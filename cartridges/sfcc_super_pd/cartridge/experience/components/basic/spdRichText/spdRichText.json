@@ -1,0 +1,23 @@
+{
+    "name": "Super Rich Text",
+    "description": "Super Rich Text Component",
+    "group": "superpagedesigner",
+    "attribute_definition_groups": [
+        {
+            "id": "textEditor",
+            "name": "Super Rich Text Editor",
+            "attribute_definitions": [
+                  {
+                      "id": "textEditor",
+                      "name": "Text Editor",
+                      "type": "custom",
+                      "required": false,
+                      "editor_definition": {
+                        "type": "spdRichTextEditor.spdRichTextEditorTrigger"
+                      }
+                  }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

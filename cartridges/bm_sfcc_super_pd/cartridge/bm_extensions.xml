@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<extensions xmlns="http://www.demandware.com/xml/bmmodules/2007-12-11"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.demandware.com/xml/bmmodules/2007-12-11 bmext.xsd">
+
+	<menuaction id="super-pd-images-uploader" menupath="studio" position="200"  site="false">
+		<name xml:lang="x-default"></name>
+		<short_description xml:lang="x-default">Upload images for richtext editor.</short_description>
+		<description xml:lang="x-default">Upload images for richtext editor.</description>
+		<sub-pipelines>
+			<pipeline name="SPDImagesUploader-Upload" />
+		</sub-pipelines>
+	</menuaction>
+
+</extensions>

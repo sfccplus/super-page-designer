@@ -1,0 +1,13 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/layouts/spdLayout.css');
+</isscript>
+
+
+<isset name="className" value="${'spdlayout-container ' + pdict.cssSelector}" scope="page" />
+
+<isprint value="${pdict.regions.layout.setClassName(className).render()}" encoding="off" />
+
+<style>
+    <isprint value="${pdict.containerCss}" encoding="off" />
+</style>
