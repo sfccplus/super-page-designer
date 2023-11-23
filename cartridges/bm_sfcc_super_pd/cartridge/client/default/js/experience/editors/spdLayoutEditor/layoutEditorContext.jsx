@@ -49,7 +49,6 @@ function editorActionsReducer(state, action) {
                 container: container,
                 containerRawCss: cssHandlerInstance.getRawCss(layoutSelector, container),
             };
-            console.log(editorState.containerRawCss);
             break;
         }
         default: {

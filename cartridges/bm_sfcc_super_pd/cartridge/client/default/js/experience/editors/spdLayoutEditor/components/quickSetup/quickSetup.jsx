@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import styles from './quick-setup.module.scss';
 import { EditorContext } from '../../layoutEditorContext';
 
-import ColorPicker from 'library/molecules/colorPicker/colorPicker';
+import ColorPicker from 'library/molecules/color-picker/color-picker';
 
 export default function RegionsCountEditor() {
     const { dispatch } = useContext(EditorContext);

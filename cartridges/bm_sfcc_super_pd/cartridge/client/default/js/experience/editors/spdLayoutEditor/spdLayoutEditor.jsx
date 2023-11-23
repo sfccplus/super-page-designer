@@ -6,6 +6,8 @@ import { EditorContext, LayoutEditorContext } from './layoutEditorContext';
 import ContainerEditor from './components/containerEditor/containerEditor';
 import CssHandler from './utilities/cssHandler';
 
+import './spdLayoutEditor.scss';
+
 function SpdLayoutEditor() {
     const { editorState } = useContext(EditorContext);
 

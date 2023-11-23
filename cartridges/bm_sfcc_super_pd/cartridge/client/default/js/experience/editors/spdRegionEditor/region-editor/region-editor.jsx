@@ -1,8 +1,8 @@
 import React from 'react';
 
-import DimensionSelector from 'library/molecules/dimensionSelector/dimension-selector';
-import FourDimensionSelector from 'library/molecules/fourDimensionSelector/four-dimension-selector';
-import ColorPicker from 'library/molecules/colorPicker/colorPicker';
+import DimensionSelector from 'library/molecules/dimension-selector/dimension-selector';
+import FourDimensionSelector from 'library/molecules/four-dimension-selector/four-dimension-selector';
+import ColorPicker from 'library/molecules/color-picker/color-picker';
 import BreakPointSelector from 'library/molecules/breakpoint-selector/breakpoint-selector';
 
 import styles from './region-editor.module.scss';

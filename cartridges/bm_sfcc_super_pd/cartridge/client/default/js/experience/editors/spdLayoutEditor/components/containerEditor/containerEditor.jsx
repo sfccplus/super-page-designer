@@ -3,9 +3,9 @@ import { EditorContext } from '../../layoutEditorContext';
 import { getRegionDefinition } from '../../utilities/regionsHandler';
 
 import BreakPointSelector from 'library/molecules/breakpoint-selector/breakpoint-selector';
-import FourDimensionSelector from 'library/molecules/fourDimensionSelector/four-dimension-selector';
-import ColorPicker from 'library/molecules/colorPicker/colorPicker';
-import AlignmentSelector from 'library/molecules/alignmentSelector/alignmentSelector';
+import FourDimensionSelector from 'library/molecules/four-dimension-selector/four-dimension-selector';
+import ColorPicker from 'library/molecules/color-picker/color-picker';
+import AlignmentSelector from 'library/molecules/alignment-selector/alignment-selector';
 
 export default function ContainerEditor({ container }) {
     const { dispatch } = useContext(EditorContext);
