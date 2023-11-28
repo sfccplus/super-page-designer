@@ -2,7 +2,6 @@
 
 var Template = require('dw/util/Template');
 var HashMap = require('dw/util/HashMap');
-var URLUtils = require('dw/web/URLUtils');
 var Logger = require('dw/system/Logger');
 var PageRenderHelper = require('*/cartridge/experience/utilities/PageRenderHelper.js');
 

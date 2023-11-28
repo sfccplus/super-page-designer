@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { clone } from 'lodash';
 
-import DimensionSelector from '../dimensionSelector/dimension-selector';
+import DimensionSelector from '../dimension-selector/dimension-selector';
 import styles from './four-dimension-selector.module.scss';
 
 function getDefaultMeasurements() {

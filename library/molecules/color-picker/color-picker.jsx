@@ -57,7 +57,7 @@ export default function ColorPicker({pickerPosition, name, value = '', onChange}
                 <input
                     type="text"
                     value={selectedColor}
-                    placeholder="Background"
+                    placeholder={name}
                     className="slds-input slds-m-right_x-small"
                     readOnly
                 />

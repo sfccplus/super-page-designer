@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './border-configurator.module.scss';
-import ColorPicker from '../colorPicker/colorPicker';
-import DimensionSelector from '../dimensionSelector/dimension-selector';
-import FourDimensionSelector from '../fourDimensionSelector/four-dimension-selector';
+import ColorPicker from '../color-picker/color-picker';
+import DimensionSelector from '../dimension-selector/dimension-selector';
+import FourDimensionSelector from '../four-dimension-selector/four-dimension-selector';
 
 const DEFAULT_VALUE = {
     color: 'rgba(0, 0, 0, 1)',

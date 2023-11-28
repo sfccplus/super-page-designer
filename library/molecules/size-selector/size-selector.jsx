@@ -1,5 +1,5 @@
 import React from 'react';
-import DimensionSelector from '../dimensionSelector/dimension-selector';
+import DimensionSelector from '../dimension-selector/dimension-selector';
 
 const DEFAULT_VALUE = {
     height: { value: 100, unit: 'px' },
