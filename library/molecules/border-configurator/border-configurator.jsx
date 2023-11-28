@@ -18,11 +18,11 @@ const DEFAULT_VALUE = {
 
 export default function BorderConfigurator({ name, value = DEFAULT_VALUE, onChange }) {
     function handleChange(property, newValue) {
-        const test = {
+        const updatedConfig = {
             ...value,
             [property]: newValue,
         };
-        onChange(test);
+        onChange(updatedConfig);
     }
 
     return (

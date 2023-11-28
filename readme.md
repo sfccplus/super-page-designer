@@ -8,7 +8,7 @@ Before you install the "Super Page Designer (SPD)" plugin, make sure that you:
 2) Installed the [Storefront Reference Architecture (SFRA)][1] cartridge.
 
 ## Installation
-For a straightforward installation use the precompiled version included in the [release](https://github.com/sfccplus/super-page-designer/releases/latest).
+For a straightforward installation use the precompiled version included with the [release](https://github.com/sfccplus/super-page-designer/releases/latest).
 
 ### Step 1: Import the metadata
 
