@@ -1,0 +1,28 @@
+{
+    "name": "Super Layout",
+    "description": "Super Layout Component",
+    "group": "superpagedesigner",
+    "attribute_definition_groups": [
+        {
+            "id": "layoutEditor",
+            "name": "Super Layout Editor",
+            "attribute_definitions": [
+                  {
+                      "id": "layoutEditor",
+                      "name": "Layout Editor",
+                      "type": "custom",
+                      "required": true,
+                      "editor_definition": {
+                        "type": "spdLayoutEditor.spdLayoutEditor"
+                      }
+                  }
+            ]
+        }
+    ],
+    "region_definitions": [
+        {
+            "id": "layout",
+            "name": "Layout"
+        }
+    ]
+}

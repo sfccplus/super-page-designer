@@ -1,0 +1,29 @@
+{
+    "name": "Super Carousel",
+    "description": "Super Carousel Component",
+    "group": "superpagedesigner",
+    "attribute_definition_groups": [
+        {
+            "id": "custom",
+            "name": "Carousel Editor",
+            "attribute_definitions": [
+                  {
+                      "id": "carouselEditor",
+                      "name": "Carousel Config",
+                      "type": "custom",
+                      "required": false,
+                      "editor_definition": {
+                        "type": "spdCarouselEditor.spdCarouselEditor"
+                      }
+                  }
+            ]
+        }
+    ],
+    "region_definitions": [
+        {
+          "id":"slides",
+          "name":"Slides",
+          "component_type_exclusions": []
+        }
+    ]
+}

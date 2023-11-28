@@ -1,0 +1,24 @@
+.imagePickerRoot {
+    height: 575px;
+    display: flex;
+    background: #eef4ff;
+    position: relative;
+    flex-direction: row-reverse;
+}
+
+.leftPanel {
+    flex: 0 0 300px;
+    background: white;
+    height: 100%;
+}
+
+.rightPanel {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    gap: 12px;
+    overflow-y: auto;
+    padding: 25px;
+}

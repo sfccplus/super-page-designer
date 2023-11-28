@@ -1,0 +1,13 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/layouts/spdCarousel.css');
+    assets.addJs('/js/thirdParty/spdSwiper.js');
+    assets.addJs('/js/experience/components/layouts/spdCarousel.js');
+</isscript>
+<isprint value="${pdict.componentStyle}" encoding="off" />
+
+<div class="spd-carousel-layout">
+    <div class="swiper" data-swiperconfig='<isprint value="${pdict.swiperconfig}" encoding="off" />'>
+        <isprint value="${pdict.regions.slides.setClassName('swiper-wrapper').render()}" encoding="off"/>
+    </div>
+</div>

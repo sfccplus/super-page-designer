@@ -1,0 +1,17 @@
+{
+    "name":"SuperPD Storefront Page",
+    "description":"A Storefront Page Type",
+    "region_definitions":[
+      {
+        "id":"headerbanner",
+        "name":"Header Banner Region",
+        "max_components": 1,
+        "component_type_exclusions": []
+      },
+      {
+        "id":"main",
+        "name":"Main Region",
+        "component_type_exclusions": []
+      }
+    ]
+}

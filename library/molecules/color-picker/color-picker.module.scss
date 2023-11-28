@@ -1,0 +1,24 @@
+.colorPickerContainer {
+    input[readonly] {
+        border-color: #dddbda;
+        padding-left: 0.75rem;
+    }
+}
+
+.colorPickerButton {
+    height: 100%;
+    width: 100%;
+}
+
+.colorPicker {
+    position: absolute;
+    z-index: 1;
+    user-select: none;
+}
+
+.pickerButtonContainer {
+    color: white;
+    border-radius: 5px;
+    background-color: #0176d3 !important;
+    background: repeating-linear-gradient(45deg, transparent, transparent 4px, currentColor 4px, currentColor calc(2 * 6px));
+}

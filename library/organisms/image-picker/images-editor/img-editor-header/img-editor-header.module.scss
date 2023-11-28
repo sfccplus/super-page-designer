@@ -1,0 +1,35 @@
+.editorHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    height: 50px;
+    background: #1e407d;
+    border-bottom: 1px solid #aab2c1;
+    
+    .backButton {
+        cursor: pointer;
+        padding: 0 9px;
+    }
+
+    .editorTitle {
+        font-size: 16px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .editorActions {
+        .primaryButton:hover {
+            --slds-c-button-color-background-hover: #0671c8;
+            --slds-c-button-color-border-hover: #0671c8;
+        }
+
+        button + button {
+            margin-left: 8px;
+        }
+
+        i {
+            margin-right: 9px;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.tox-tinymce {
+    border-radius: 0 !important;
+}
+
+#tinymce {
+    margin: 8px;
+    ul, ol {
+        padding: 16px;
+    }
+    ul {
+        list-style: disc;
+    }
+}
+
+.tox-collection__item-label {
+    @for $i from 0 through 5 {
+        h#{$i+1} {
+          font-size: 64px - ($i * 10) !important;
+          line-height: 1 !important;
+        }
+    }
+}

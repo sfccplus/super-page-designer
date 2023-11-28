@@ -1,0 +1,12 @@
+@import "swiper/swiper";
+@import "swiper/css/effect-fade";
+
+.spd-carousel-layout {
+    max-width: 100%;
+    .swiper {
+        .swiper-slide {
+            height: auto;
+            width: auto;
+        }
+    }
+}

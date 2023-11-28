@@ -1,0 +1,11 @@
+.lockIcon {
+    cursor: pointer;
+
+    &:hover {
+        color: #005fb2;
+    }
+
+    &:global:has(.fa-lock) {
+        color: #0070d2;
+    }
+}

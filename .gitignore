@@ -1,0 +1,8 @@
+node_modules
+
+**/cartridge/static
+sfra-webpack-builder
+dw.json
+
+.vscode
+.DS_Store

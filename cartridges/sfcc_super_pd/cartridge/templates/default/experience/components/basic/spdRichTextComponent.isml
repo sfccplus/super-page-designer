@@ -1,0 +1,8 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/basic/spdRichTextComponent.css');
+</isscript>
+
+<div class="rich-text-component">
+    <isprint value="${pdict.textEditor}" encoding="off" />
+</div>
