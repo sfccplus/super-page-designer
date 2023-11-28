@@ -8,15 +8,16 @@ Before you install the "Super Page Designer (SPD)" plugin, make sure that you:
 2) Installed the [Storefront Reference Architecture (SFRA)][1] cartridge.
 
 ## Installation
+For a straightforward installation use the precompiled version included in the [release](https://github.com/sfccplus/super-page-designer/releases/latest).
 
 ### Step 1: Import the metadata
 
-1) Zip the [metadata](metadata) folder.
+1) Zip the `metadata` folder.
 2) In the Business Manager, go to Administration > Site Development > Site Import & Export and import the zipped file.
 <br/>
 
 ### Step 2: Set up the cartridges path
-First, upload the cartridges provided inside [cartridges](cartridges) folder, then:
+First, upload the cartridges provided inside the `cartridges` folder, then:
 
 **1) Add components:**
 1) Go to Administration > Sites > Manage Sites > [yourSite] > Settings.
