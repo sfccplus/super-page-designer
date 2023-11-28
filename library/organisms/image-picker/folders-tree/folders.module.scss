@@ -1,0 +1,36 @@
+div[class=folder-row] {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+
+    &:hover {
+        background-color: #e8e8e8;
+    }
+
+    &[aria-selected=true] {
+        font-weight: 500;
+        background-color: #d0eaff;
+    }
+}
+
+.folderNode {
+    display: flex;
+    align-items: center;
+
+    .folderChevron {
+        transition: 0.3s all;
+        i {margin: 0 7px;}
+
+        &.folderOpen {
+            transform: rotate(90deg);
+        }
+    }
+}
+.folderName {
+    max-width: 220px;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+

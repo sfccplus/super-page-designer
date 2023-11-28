@@ -8,7 +8,9 @@
 		<short_description xml:lang="x-default">Upload images for richtext editor.</short_description>
 		<description xml:lang="x-default">Upload images for richtext editor.</description>
 		<sub-pipelines>
-			<pipeline name="SPDImagesUploader-Upload" />
+			<pipeline name="SPDImagesManager-Upload" />
+			<pipeline name="SPDImagesManager-GetFolderImages" />
+			<pipeline name="SPDImagesManager-GetLibraryFolders" />
 		</sub-pipelines>
 	</menuaction>
 

@@ -1,0 +1,57 @@
+.imagesEditorContainer {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    .editorLayout {
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 50px);
+        background-color: #f3f3f3;
+    }
+
+    .editorPreview {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        .imagePreview {
+            height: calc(100% - 30px);
+            width: calc(100% - 30px);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    .editorControls {
+        flex: 0 0 60px;
+        display: flex;
+        justify-content: center;
+
+        .qualityControl {
+            width: 250px;
+        }
+
+        [class=range-slider] {
+            [class=range-slider__range] {
+                border-radius: 6px;
+            }
+
+            [class=range-slider__thumb] {
+                width: 20px;
+                height: 20px;
+
+                &[data-lower] {
+                    width: 0;
+                }
+            }
+        } 
+    }
+}
