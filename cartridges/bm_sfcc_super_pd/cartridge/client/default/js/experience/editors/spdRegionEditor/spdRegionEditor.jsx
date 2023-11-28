@@ -8,7 +8,7 @@ import { getRegionDefinition } from '../spdLayoutEditor/utilities/regionsHandler
 import RegionEditor from './region-editor/region-editor';
 import CssHandler from '../spdLayoutEditor/utilities/cssHandler';
 
-function EditorContainer({ value, cssHandler }) {
+function EditorContainer({ cssHandler, value }) {
     const [region, setRegion] = useState(value.region);
     const [currentBreakpoint, setCurrentBreakpoint] = useState('default');
 

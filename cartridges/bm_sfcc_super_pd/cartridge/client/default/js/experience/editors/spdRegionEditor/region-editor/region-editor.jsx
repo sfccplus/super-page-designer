@@ -1,4 +1,5 @@
 import React from 'react';
+import { isNil } from 'lodash';
 
 import DimensionSelector from 'library/molecules/dimension-selector/dimension-selector';
 import FourDimensionSelector from 'library/molecules/four-dimension-selector/four-dimension-selector';
@@ -7,6 +8,7 @@ import BreakPointSelector from 'library/molecules/breakpoint-selector/breakpoint
 
 import styles from './region-editor.module.scss';
 import NumberInput from 'library/atoms/numberInput/numberInput';
+import BackgroundSettings from 'library/molecules/background-settings/background-settings';
 
 export default function RegionEditor({
     region,
@@ -14,10 +16,16 @@ export default function RegionEditor({
     onChange,
     onBreakpointChange,
 }) {
-    function getPropertyValue(propertyName) {
+    function getPropertyValue(propertyName, defaultValue) {
         if (!region) return;
 
-        return region.breakpoints[breakpoint][propertyName];
+        let value = region.breakpoints[breakpoint][propertyName];
+
+        if (isNil(value) && defaultValue) {
+            value = defaultValue;
+        }
+
+        return value;
     }
 
     function handleValueChange(propertyName, value) {
@@ -77,6 +85,7 @@ export default function RegionEditor({
                     onChange={(value) => handleValueChange('borderRadius', value)}
                 />
             </div>
+            <BackgroundSettings value={getPropertyValue} onChange={handleValueChange} />
             <div className="slds-m-bottom_small">
                 <NumberInput
                     name="Order"

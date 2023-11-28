@@ -9,11 +9,33 @@ var URLUtils = require('dw/web/URLUtils');
 server.get('ImageURL', function (req, res, next) {
     const siteLibrary = dw.content.ContentMgr.getSiteLibrary();
 
+    const transformationObject = {};
+
+    const querystring = req.querystring;
+    if (querystring.cropX) {
+        transformationObject.cropX = +querystring.cropX;
+        transformationObject.cropY = +querystring.cropY;
+        transformationObject.cropWidth = +querystring.cropWidth;
+        transformationObject.cropHeight = +querystring.cropHeight;
+    }
+
+    if (querystring.quality) {
+        transformationObject.quality = +querystring.quality;
+    }
+
+    if (querystring.width) {
+        transformationObject.scaleWidth = +querystring.width;
+    }
+
+    if (querystring.height) {
+        transformationObject.scaleHeight = +querystring.height;
+    }
+
     var libraryUrl = URLUtils.imageURL(
         URLUtils.CONTEXT_LIBRARY,
         siteLibrary.ID,
         req.querystring.imagePath,
-        { quality: 80 }
+        transformationObject
     ).toString();
 
     res.redirect(libraryUrl);

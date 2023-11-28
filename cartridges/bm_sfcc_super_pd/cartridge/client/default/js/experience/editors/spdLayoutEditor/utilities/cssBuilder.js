@@ -1,4 +1,4 @@
-import { cloneDeep } from 'lodash';
+import { cloneDeep, isNil } from 'lodash';
 import { getMeasurementValue, getMeasurementsValue } from './cssHelpers';
 
 function deleteProperty(object, propertyName) {
@@ -20,7 +20,7 @@ export function mapCssValues(cssProperties) {
     for (const cssProperty in cssPropertiesCopy) {
         propertyValue = cssPropertiesCopy[cssProperty];
 
-        if (!propertyValue) {
+        if (isNil(propertyValue)) {
             deleteProperty(cssPropertiesCopy, cssProperty);
             continue;
         }
@@ -38,6 +38,12 @@ export function mapCssValues(cssProperties) {
             case 'margin':
             case 'borderRadius':
                 propertyValue = getMeasurementsValue(propertyValue);
+                break;
+            case 'backgroundImage':
+                propertyValue = `url("${propertyValue}")`;
+                break;
+            case 'backgroundRepeat':
+                propertyValue = propertyValue ? 'repeat' : 'no-repeat';
                 break;
 
             default:

@@ -1,4 +1,6 @@
 import React, { useContext, useState } from 'react';
+import { isNil } from 'lodash';
+
 import { EditorContext } from '../../layoutEditorContext';
 import { getRegionDefinition } from '../../utilities/regionsHandler';
 
@@ -6,6 +8,8 @@ import BreakPointSelector from 'library/molecules/breakpoint-selector/breakpoint
 import FourDimensionSelector from 'library/molecules/four-dimension-selector/four-dimension-selector';
 import ColorPicker from 'library/molecules/color-picker/color-picker';
 import AlignmentSelector from 'library/molecules/alignment-selector/alignment-selector';
+import BackgroundSettings from 'library/molecules/background-settings/background-settings';
+import DimensionSelector from 'library/molecules/dimension-selector/dimension-selector';
 
 export default function ContainerEditor({ container }) {
     const { dispatch } = useContext(EditorContext);
@@ -24,8 +28,14 @@ export default function ContainerEditor({ container }) {
         });
     }
 
-    function getPropertyValue(propertyName) {
-        return container.breakpoints[currentBreakpoint][propertyName];
+    function getPropertyValue(propertyName, defaultValue) {
+        let value = container.breakpoints[currentBreakpoint][propertyName];
+
+        if (isNil(value) && defaultValue) {
+            value = defaultValue;
+        }
+
+        return value;
     }
 
     return (
@@ -34,6 +44,19 @@ export default function ContainerEditor({ container }) {
                 value={currentBreakpoint}
                 onChange={setCurrentBreakpoint}
             />
+            <div className="slds-grid slds-m-bottom_small">
+                <DimensionSelector
+                    name="Width"
+                    className="slds-m-right_x-small"
+                    measurement={getPropertyValue('width')}
+                    onChange={(value) => handleValueChange('width', value)}
+                />
+                <DimensionSelector
+                    name="Height"
+                    measurement={getPropertyValue('height')}
+                    onChange={(value) => handleValueChange('height', value)}
+                />
+            </div>
             <div className="slds-grid slds-m-bottom_small slds-grid_align-spread">
                 <AlignmentSelector
                     name="Horizontal Alignment"
@@ -67,6 +90,12 @@ export default function ContainerEditor({ container }) {
                     name="Background Color"
                     value={getPropertyValue('backgroundColor')}
                     onChange={(value) => handleValueChange('backgroundColor', value)}
+                />
+            </div>
+            <div className="slds-m-bottom_small">
+                <BackgroundSettings
+                    value={getPropertyValue}
+                    onChange={handleValueChange}
                 />
             </div>
         </>

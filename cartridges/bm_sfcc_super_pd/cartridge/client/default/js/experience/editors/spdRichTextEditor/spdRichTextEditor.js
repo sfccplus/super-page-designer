@@ -9,7 +9,7 @@ const baseConfig = {
     selector: '#editor-textarea',
     promotion: false,
     plugins: 'table link image lists advlist code',
-    height: '1000px',
+    height: '755px',
     branding: false,
     resize: false,
     menubar: 'edit insert view format table',
