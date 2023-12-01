@@ -78,3 +78,8 @@ To match you design needs, font sizes used in the rich text editor can also be c
 This plugin is [MIT Licensed](LICENSE)
 
 [1]: https://github.com/SalesforceCommerceCloud/storefront-reference-architecture/tree/master
+
+## Disclaimer
+This project is maintained by the Salesforce Community. Salesforce Commerce Cloud or Salesforce Platform Technical Support do not support this project or its setup...
+
+For feature requests or bugs, please open a GitHub issue. Contributions are ALWAYS WELCOME -- and they benefit the broader community.
