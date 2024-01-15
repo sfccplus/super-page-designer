@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { ColorEditor } from '@sfccplus/super-pd-kit';
+import { ColorEditor } from '@sfccplus/super-pd-core';
 
 (() => {
     subscribe('sfcc:ready', ({ value }) => {
