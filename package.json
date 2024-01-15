@@ -1,6 +1,6 @@
 {
   "name": "sfcc-super-pd",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "scripts": {
     "build:dev": "./sfra-webpack-builder/node_modules/.bin/webpack --config ./sfra-webpack-builder/webpack.config.js --env dev --env local",
     "build:prod": "./sfra-webpack-builder/node_modules/.bin/webpack --config ./sfra-webpack-builder/webpack.config.js --env local",
