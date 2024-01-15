@@ -19,14 +19,14 @@ module.exports.render = function (context, modelIn) {
 
     var content = context.content;
 
-    var layoutEditor = content.layoutEditor;
+    var layoutEditor = content.layoutEditor.value;
 
     var editorRegions = layoutEditor.regions;
 
     var component = context.component;
     var regions = PageRenderHelper.getRegionModelRegistry(component);
 
-    model.cssSelector = 'layout-' + layoutEditor.layoutKey;
+    model.cssSelector = 'layout-' + layoutEditor.key;
     model.regionsCss = layoutEditor.regionsRawCss;
     model.containerCss = layoutEditor.containerRawCss;
 

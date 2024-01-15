@@ -11,7 +11,6 @@ module.exports.aliasConfig = {
             process.cwd(),
             'cartridges/bm_sfcc_super_pd/cartridge/client/default/'
         ),
-        library: path.resolve(process.cwd(), 'library/'),
     },
 };
 

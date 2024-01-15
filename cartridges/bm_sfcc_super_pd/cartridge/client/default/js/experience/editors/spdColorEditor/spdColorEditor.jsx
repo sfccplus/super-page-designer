@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { CarouselEditor } from '@sfccplus/super-pd-core';
+import { ColorEditor } from '@sfccplus/super-pd-core';
 
 (() => {
     subscribe('sfcc:ready', ({ value }) => {
@@ -8,6 +8,6 @@ import { CarouselEditor } from '@sfccplus/super-pd-core';
         document.body.append(rootElement);
 
         const root = createRoot(rootElement);
-        root.render(<CarouselEditor value={value} />);
+        root.render(<ColorEditor value={value} />);
     });
 })();

@@ -1,60 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { cloneDeep } from 'lodash';
-
-import { generateSalt } from 'library/utilities';
-
-import { getRegionDefinition } from '../spdLayoutEditor/utilities/regionsHandler';
-import RegionEditor from './region-editor/region-editor';
-import CssHandler from '../spdLayoutEditor/utilities/cssHandler';
-
-function EditorContainer({ cssHandler, value }) {
-    const [region, setRegion] = useState(value.region);
-    const [currentBreakpoint, setCurrentBreakpoint] = useState('default');
-
-    useEffect(() => {
-        if (!region) {
-            setRegion(
-                getRegionDefinition({
-                    key: generateSalt(9),
-                }),
-            );
-        }
-    }, []);
-
-    function handleValueChange(propertyName, value) {
-        const cssSelector = `.spdlayout-region.region${region.key}`;
-
-        region.breakpoints[currentBreakpoint][propertyName] = value;
-        setRegion(cloneDeep(region));
-
-        emit({
-            type: 'sfcc:value',
-            payload: {
-                region,
-                regionsRawCss: cssHandler.getRawCss(cssSelector, region),
-            },
-        });
-    }
-
-    return (
-        <RegionEditor
-            breakpoint={currentBreakpoint}
-            region={region}
-            onChange={handleValueChange}
-            onBreakpointChange={setCurrentBreakpoint}
-        />
-    );
-}
+import { RegionEditor } from '@sfccplus/super-pd-core';
 
 (() => {
-    subscribe('sfcc:ready', ({ value, config }) => {
-        const template = '<div id="region-editor"></div>';
-        document.body.innerHTML = template;
+    subscribe('sfcc:ready', ({ value = {}, config }) => {
+        const rootElement = document.createElement('div');
+        document.body.append(rootElement);
 
-        const cssHandler = new CssHandler(config.breakpointsConfig);
-
-        const root = createRoot(document.querySelector('#region-editor'));
-        root.render(<EditorContainer cssHandler={cssHandler} value={value || {}} />);
+        const root = createRoot(rootElement);
+        root.render(
+            <RegionEditor value={value} breakpointsConfig={config.breakpointsConfig} />,
+        );
     });
 })();

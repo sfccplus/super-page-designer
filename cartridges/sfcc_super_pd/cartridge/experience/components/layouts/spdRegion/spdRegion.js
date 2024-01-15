@@ -17,12 +17,12 @@ module.exports.render = function (context, modelIn) {
 
     var content = context.content;
     var component = context.component;
-    var regionEditor = content.regionEditor;
+    var regionEditor = content.regionEditor.value;
 
     var regionClassName = 'spdlayout-region';
 
     if (regionEditor) {
-        regionClassName += ' region' + regionEditor.region.key;
+        regionClassName += ' region-' + regionEditor.key;
     }
 
     var componentRenderSettings = context.componentRenderSettings;
@@ -30,7 +30,7 @@ module.exports.render = function (context, modelIn) {
         class: regionClassName,
     });
 
-    model.regionsCss = regionEditor ? regionEditor.regionsRawCss : '';
+    model.regionsCss = regionEditor ? regionEditor.regionRawCss : '';
 
     model.regions = PageRenderHelper.getRegionModelRegistry(component);
 
