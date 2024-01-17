@@ -1,5 +1,5 @@
 {
-    "name": "Carousel Studio",
+    "name": "Image Input",
     "resources": {
       "scripts": [
         "/js/experience/editors/spdImageInput/spdImageInput.js"
